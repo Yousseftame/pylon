@@ -69,7 +69,7 @@ export default function Footer() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-y-4 sm:gap-y-5 md:gap-y-6 lg:gap-y-8 sm:gap-x-8">
                     <a
-                      href="https://dsplusme.com/"
+                      href="https://digitalstudioeg.com/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-base sm:text-lg md:text-xl lg:text-2xl text-black/70 hover:text-black transition-colors font-light tracking-wide"
@@ -85,7 +85,7 @@ export default function Footer() {
                       THINK
                     </a>
                     <a
-                      href="#insightify"
+                      href="https://insightify-eg.com/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-base sm:text-lg md:text-xl lg:text-2xl text-black/70 hover:text-black transition-colors font-light tracking-wide"
@@ -93,7 +93,7 @@ export default function Footer() {
                       INSIGHTIFY
                     </a>
                     <a
-                      href="#media"
+                      href="http://mediamagneteg.com/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-base sm:text-lg md:text-xl lg:text-2xl text-black/70 hover:text-black transition-colors font-light tracking-wide"
@@ -109,7 +109,7 @@ export default function Footer() {
                       TUT GROUP
                     </a>
                     <a
-                      href="#tact"
+                      href="https://tactinnovations.com/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-base sm:text-lg md:text-xl lg:text-2xl text-black/70 hover:text-black transition-colors font-light tracking-wide"
