@@ -17,7 +17,6 @@ export default function Home() {
       <Services />
 
       <Footer />
-      {/* Scroll to Top Button */}
       <ScrollToTop />
     </div>
   );
