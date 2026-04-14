@@ -1,84 +1,60 @@
-import TutSection from "../../components/shared/TutSection";
-import DSSection from "../../components/shared/DSSection";
-import TactSection from "../../components/shared/Tactsection";
-import ThinkSection from "../../components/shared/ThinkSection";
-import InsightifySection from "../../components/shared/InsightifySection";
-import MediaMagnetSection from "../../components/shared/Mediamagnetsection";
+import React from 'react';
 
 export default function Services() {
-  const services = [
-    { label: "MEDIA PRODUCTIONS", url: "" },
-    { label: "PUBLIC POLICY", url: "" },
-    { label: "AI SOLUTIONS", url: "" },
-    { label: "E-COMMERCE & TRADE", url: "" },
-    { label: "PR & MARKETING", url: "" },
-    { label: "STRATEGIC FORSIGHT", url: "" },
-    { label: "WEBSITE, APPS & AI", url: "" },
-    { label: "ADVERTISING CAMPAIGNS", url: "" },
-    { label: "BRANDING STRATEGIES", url: "" },
-    { label: "SPACE DESIGN", url: "" },
-    { label: "CONTENT CREATION", url: "" },
-    { label: "SOCIAL MEDIA", url: "" },
-    { label: "MEDIA BUYING", url: "" },
-    { label: "DOCUMENTARY PRODUCTION", url: "" },
-    { label: "SCRIPT WRITING", url: "" },
+  const row1 = [
+    "MEDIA PRODUCTIONS", "PUBLIC POLICY", "AI SOLUTIONS", 
+    "E-COMMERCE & TRADE", "PR & MARKETING", "STRATEGIC FORSIGHT", "WEBSITE, APPS & AI"
+  ];
+  
+  const row2 = [
+    "ADVERTISING CAMPAIGNS", "BRANDING STRATEGIES", "SPACE DESIGN", 
+    "CONTENT CREATION", "SOCIAL MEDIA", "MEDIA BUYING", "DOCUMENTARY PRODUCTION", "SCRIPT WRITING"
   ];
 
-  return (
-    <>
-      <section
-        id="services"
-        className="bg-services-cover w-full relative overflow-hidden"
-      >
-        {/* Glass morphism container */}
-        <div className="absolute inset-0">
-          <div className=" mx-auto px-4 sm:px-8 md:px-12 py-39 sm:py-16 md:py-20 lg:py-24 xl:py-32">
-            {/* Title */}
-            <h3 className="text-center text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] font-normal mb-8 sm:mb-10 md:mb-12 text-black">
-              Our Services
-            </h3>
+  const renderTextItem = (text: string) => (
+    <div className="flex items-center mx-4 sm:mx-8 group cursor-pointer">
+      <span className="text-[40px] sm:text-[60px] md:text-[80px] lg:text-[100px] font-bold text-transparent tracking-tighter transition-all duration-300 group-hover:text-white group-hover:scale-105" 
+            style={{ WebkitTextStroke: '1px #525252' }}>
+        {text}
+      </span>
+      <span className="ml-8 sm:ml-16 w-3 h-3 sm:w-4 sm:h-4 bg-[#525252] group-hover:bg-white rounded-full transition-colors"></span>
+    </div>
+  );
 
-            {/* Services Grid - Fixed responsive wrapping */}
-            <div className="flex flex-wrap justify-center items-center gap-2.5 sm:gap-3 md:gap-4 w-full max-w-[1200px] mx-auto px-2 sm:px-4 mb-12 sm:mb-16">
-              {services.map((service, index) => (
-                <button
-                  // onClick={() => {
-                  //   window.open(service.url, "_blank", "noopener,noreferrer");
-                  // }}
-                  key={index}
-                  className="service-button px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-full bg-[#D2D4D1]/90 text-black text-[9px] sm:text-[10px] md:text-[11px] lg:text-[13px] font-medium tracking-wider uppercase transition-all duration-300 hover:bg-black hover:text-white shadow-[0_4px_8px_rgba(0,0,0,0.15)] whitespace-nowrap"
-                >
-                  {service.label}
-                </button>
-              ))}
-            </div>
+  return (
+    <section id="services" className="relative w-full py-32 bg-transparent overflow-hidden border-t border-white/5 marquee-container">
+      <div className="max-w-[1200px] mx-auto px-6 sm:px-8 mb-16 relative z-10">
+        <p className="text-[12px] font-bold tracking-widest text-white uppercase mb-4" data-aos="fade-up">
+          Capabilities
+        </p>
+        <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-300 tracking-tight" data-aos="fade-up" data-aos-delay="100">
+          An Ecosystem of Specialties
+        </h3>
+      </div>
+
+      <div className="flex flex-col gap-4 sm:gap-8 relative z-10 w-full overflow-hidden select-none">
+        
+        {/* Row 1 - Scrolling Left */}
+        <div className="w-max flex animate-marquee-left">
+          <div className="flex items-center">
+            {row1.map((item, i) => renderTextItem(item))}
+          </div>
+          <div className="flex items-center">
+            {row1.map((item, i) => renderTextItem(item))}
           </div>
         </div>
 
-        {/* TUT Section - Continues with same background */}
-        <div className="relative mt-[100vh] sm:mt-[90vh] md:mt-[80vh] lg:mt-[70vh]">
-          <TutSection />
+        {/* Row 2 - Scrolling Right */}
+        <div className="w-max flex animate-marquee-right">
+          <div className="flex items-center">
+            {row2.map((item, i) => renderTextItem(item))}
+          </div>
+          <div className="flex items-center">
+            {row2.map((item, i) => renderTextItem(item))}
+          </div>
         </div>
 
-        {/* DS Section - Continues with same background */}
-        <div className="relative">
-          <DSSection />
-        </div>
-
-        {/* TACT Section - Continues with same background */}
-        <div className="relative">
-          <TactSection />
-        </div>
-
-        {/* THINK Section - Has its own background image */}
-        <ThinkSection />
-
-        {/* Insightify Section - Has its own background image */}
-        <InsightifySection />
-
-        {/* Media Magnet Section - Continues with same background */}
-        <MediaMagnetSection />
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

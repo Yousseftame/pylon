@@ -1,124 +1,56 @@
-import InsightifyLogo from "../../assets/insightify.png"; // Update with your actual logo path
-import InsightifyImage1 from "../../assets/insightifyImage1.webp"; // Image inside glass box
-import InsightifyImage2 from "../../assets/insightifyImage2.webp"; // Top right image
-import InsightifyImage3 from "../../assets/insightifyImage3.webp"; // Bottom right image
+import React from 'react';
+import InsightifyLogo from "../../assets/insightify.png";
+import InsightifyImage1 from "../../assets/insightifyImage1.webp";
+import InsightifyImage2 from "../../assets/insightifyImage2.webp";
+import InsightifyImage3 from "../../assets/insightifyImage3.webp";
 
 export default function InsightifySection() {
   return (
-    <section
-      id="insightify"
-      className=" w-full py-16 relative bg-insightify-cover bg-cover bg-center bg-no-repeat"
-    >
-      {/* Optional overlay */}
-      <div className="absolute inset-0 bg-black/10"></div>
-
-      <div className="  mx-auto px-4 sm:px-12 overflow-hidden relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch min-h-[800px]">
-          {/* Left Side - Glass Box with Content and Image */}
-          <div data-aos="fade-right" className="flex flex-col h-full">
-            {/* Glass Box Container */}
-            <div className="bg-[#0a3a5c]/30 backdrop-blur-md rounded-2xl p-8 sm:p-10 shadow-xl border border-white/20 flex flex-col h-full">
-              {/* Logo */}
-              <div className="mb-8">
-                <img
-                  src={InsightifyLogo}
-                  alt="Insightify Logo"
-                  className="h-16 sm:h-20"
-                />
-              </div>
-
-              {/* First Description - Main Heading */}
-              <div className="mb-6">
-                <h3 className="text-xl sm:text-2xl font-normal leading-tight text-white">
-                  TRANSLATING DATA AND INSIGHT INTO DECISIONS THAT SHAPE THE
-                  FUTURE.{" "}
-                  <span className="underline font-extrabold">
-                    {" "}
-                    INSIGHTIFY IS PYLON'S STRATEGIC BRAIN{" "}
-                  </span>
-                  , A POLICY AND RESEARCH POWERHOUSE DELIVERING ACTIONABLE
-                  INTELLIGENCE TO GOVERNMENTS, INSTITUTIONS, AND ORGANIZATIONS.
-                  WITH A DEEP UNDERSTANDING OF REGIONAL CONTEXT AND GLOBAL
-                  DYNAMICS, INSIGHTIFY SUPPORTS DECISION-MAKERS IN BUILDING
-                  RESILIENT POLICIES AND MEANINGFUL CHANGE.
-                </h3>
-              </div>
-
-              {/* Second Description - Body Text */}
-              <div className="mb-8">
-                <span className="text-sm sm:text-base text-white/90 leading-tight">
-                  With deep regional knowledge and strategic clarity, we support
-                  institutions and governments in building frameworks that drive
-                  equitable growth and cultural relevance.
-                </span>
-              </div>
-
-              {/* Button */}
-              <div
-                onClick={() => {
-                  window.open(
-                    "https://insightify-eg.com/",
-                    "_blank",
-                    "noopener,noreferrer",
-                  );
-                }}
-                className="mb-8"
-              >
-                <button className="service-button px-8 py-4 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white text-[11px] sm:text-[13px] font-medium tracking-wider uppercase transition-all duration-300 hover:bg-white hover:text-black shadow-[0_4px_8px_rgba(0,0,0,0.15)]">
-                  GO TO WEBSITE
-                </button>
-              </div>
-
-              {/* Image inside Glass Box */}
-              <div className="mt-auto flex-grow">
-                <div className="h-[280px] overflow-hidden rounded-lg">
-                  <img
-                    src={InsightifyImage3}
-                    alt="Insightify Research"
-                    className="w-full h-full object-fill transition-transform duration-300 hover:scale-105"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Side - 2 Images with Text Between */}
-          <div
-            data-aos="fade-left"
-            className="flex flex-col justify-start space-y-6 h-full"
-          >
-            {/* Top Image */}
-            <div className="  h-[380px] lg:h-[500px] overflow-hidden rounded-lg">
-              <img
-                src={InsightifyImage1}
-                alt="Policy Research"
-                className="w-full h-full object-fill transition-transform duration-300 hover:scale-105"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-
-            {/* Text Between Images */}
-            <div className="py-4">
-              <span className="text-xs sm:text-sm tracking-wider uppercase text-white">
-                PUBLIC POLICY, RESEARCH AND STRATEGIC ADVISORY
-              </span>
-            </div>
-
-            {/* Bottom Image */}
-            <div className="h-[380px] overflow-hidden rounded-lg">
-              <img
-                src={InsightifyImage2}
-                alt="Strategic Advisory"
-                className="w-full h-full object-fill transition-transform duration-300 hover:scale-105"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
+    <section id="insightify" className="w-full py-24 sm:py-32 border-y-2 border-[#111111] bg-[#FAFAFA] relative overflow-hidden">
+      <div className="max-w-[1600px] mx-auto px-6 sm:px-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start lg:items-stretch">
+        
+        {/* Gallery Column */}
+        <div data-aos="fade-right" data-aos-duration="1000" className="lg:col-span-5 h-full relative p-6 brutal-panel bg-[#111111]">
+          <div className="grid grid-cols-2 gap-4 h-full min-h-[400px]">
+             <img src={InsightifyImage1} alt="Policy Research" className="w-full h-full object-cover grayscale opacity-90 border border-white/20" />
+             <img src={InsightifyImage2} alt="Strategic Advisory" className="w-full h-full object-cover grayscale opacity-90 border border-white/20" />
           </div>
         </div>
+
+        {/* Text Editorial Column */}
+        <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200" className="lg:col-span-7 h-full flex flex-col justify-between py-8 lg:pl-12">
+          <div>
+            <div className="mb-12 border-b-4 border-[#111111] pb-6 inline-block">
+              <img src={InsightifyLogo} alt="Insightify Logo" className="h-8 sm:h-10 object-contain filter invert opacity-90" />
+            </div>
+
+            <p className="text-[12px] sm:text-[14px] font-bold tracking-[0.2em] uppercase text-[#111111] mb-6 inline-block bg-[#D4AF37] px-2 py-1">
+              MAGAZINE / DATA INTELLIGENCE
+            </p>
+
+            <h2 className="text-4xl sm:text-5xl md:text-6xl text-[#111111] font-black leading-[0.9] mb-12 tracking-tighter uppercase break-words hyphens-auto mt-4">
+              ACTIONABLE<br/>INTELLIGENCE.
+            </h2>
+          </div>
+
+          <div className="border-l-2 border-[#111111]/20 pl-6 lg:pl-8">
+            <p className="text-[16px] text-[#111111] leading-relaxed mb-6 font-bold">
+              INSIGHTIFY IS PYLON'S STRATEGIC BRAIN, A POLICY AND RESEARCH POWERHOUSE DELIVERING ACTIONABLE INTELLIGENCE.
+            </p>
+
+            <p className="text-[14px] text-[#666666] leading-relaxed mb-10 font-normal max-w-xl">
+              With a deep understanding of regional context and global dynamics, Insightify supports decision-makers in building resilient policies and meaningful change. With deep regional knowledge and strategic clarity, we support institutions and governments in building frameworks that drive equitable growth.
+            </p>
+
+            <button
+              onClick={() => window.open("https://insightify-eg.com/", "_blank", "noopener,noreferrer")}
+              className="text-left py-2 border-b-2 border-[#111111] text-[#111111] text-[13px] font-bold tracking-widest uppercase transition-all duration-200 hover:text-[#D4AF37] hover:border-[#D4AF37]"
+            >
+              READ OUR RESEARCH &rarr;
+            </button>
+          </div>
+        </div>
+
       </div>
     </section>
   );

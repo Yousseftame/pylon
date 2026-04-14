@@ -1,113 +1,46 @@
-import ThinkLogo from "../../assets/think.png"; // Update with your actual logo path
-import tk from "../../assets/tk.webp"; // Update with your actual image path
-import tk2 from "../../assets/tk2.webp"; // Update with your actual image path
+import React from 'react';
+import ThinkLogo from "../../assets/think.png";
+import tk from "../../assets/tk.webp";
+import tk2 from "../../assets/tk2.webp";
 
 export default function ThinkSection() {
   return (
-    <section
-      id="think"
-      className="min-h-screen w-full py-16 bg-think-cover bg-cover bg-center bg-no-repeat relative "
-    >
-      {/* Optional dark overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/20"></div>
-
-      <div className=" mx-auto px-4 sm:px-12 overflow-hidden relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch min-h-[800px]">
-          {/* Left Side - Images with Text */}
-          <div
-            data-aos="fade-right"
-            className="flex flex-col justify-between  space-y-6 h-full"
-          >
-            {/* First Image - Top */}
-            <div className="flex-1 overflow-hidden rounded-lg">
-              <img
-                src={tk}
-                alt="THINK AI Technology"
-                className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-
-            {/* Text Between Images */}
-            <div className="py-4">
-              <span className="text-xs sm:text-sm tracking-wider uppercase text-white">
-                ARTIFICIAL INTELLIGENCE & IMMERSIVE TECHNOLOGIES
-              </span>
-            </div>
-
-            {/* Second Image - Middle */}
-            <div className="flex-1 overflow-hidden rounded-lg">
-              <img
-                src={tk2}
-                alt="THINK Immersive Tech"
-                className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-
-            {/* Third Image - Bottom */}
-            {/* <div className="flex-1 overflow-hidden rounded-lg">
-              <img
-                src={ThinkImage3}
-                alt="THINK Innovation"
-                className="w-full h-full object-cover"
-              />
-            </div> */}
+    <section id="think" className="w-full py-24 sm:py-32 border-b-2 border-[#111111] bg-[#FAFAFA] relative overflow-hidden">
+      <div className="max-w-[1600px] mx-auto px-6 sm:px-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        {/* Typographic Left */}
+        <div data-aos="fade-right" data-aos-duration="1000" className="lg:col-span-7 pr-0 lg:pr-12 border-b-2 lg:border-b-0 lg:border-r-2 border-[#111111] pb-12 lg:pb-0">
+          <div className="mb-12 border-b-4 border-[#111111] pb-6 inline-block">
+            <img src={ThinkLogo} alt="Think Logo" className="h-10 sm:h-12 object-contain filter invert opacity-90" />
           </div>
 
-          {/* Right Side - Content */}
-          <div
-            data-aos="fade-left"
-            className="flex flex-col justify-between   h-full"
-          >
-            {/* Logo Image */}
-            <div className="mb-8">
-              <img src={ThinkLogo} alt="THINK Logo" className="h-20 sm:h-18" />
-            </div>
+          <p className="text-[12px] sm:text-[14px] font-bold tracking-[0.2em] uppercase text-[#D4AF37] mb-6">
+            [ AI & CAPTIVATING SPACES ]
+          </p>
 
-            {/* First Description - Main Heading */}
-            <div className="mb-8 lg:mt-12">
-              <h3 className="text-xl sm:text-2xl   lg:text-3xl font-normal  text-white">
-                WE BRIDGE IMAGINATION AND INTELLIGENCE — BUILDING SCALABLE AI
-                TOOLS, IMMERSIVE ENVIRONMENTS, AND SMART PLATFORMS THAT UNLOCK
-                NEW POSSIBILITIES ACROSS INDUSTRIES.
-              </h3>
-            </div>
-
-            {/* Second Description - Body Text */}
-            <div className=" lg:mt-60   ">
-              <span className="text-sm sm:text-3xl  lg:pt-17  text-white ">
-                Engineering smart environments and human-centered innovation,
-                THINK is where imagination meets code. Specializing in AI
-                systems, XR technologies, and digital simulations, THINK
-                develops immersive solutions that revolutionize how we interact
-                with data, environments, and each other. It is the group's lab
-                for pioneering the experiential tech of tomorrow.
-              </span>
-            </div>
-
-            {/* Spacer to push button down */}
-            <div className="flex-grow"></div>
-
-            {/* Button */}
-            <div className="mt-8">
-              <button
-                onClick={() => {
-                  window.open(
-                    "https://thinkstudio.ai/",
-                    "_blank",
-                    "noopener,noreferrer",
-                  );
-                }}
-                className="service-button px-8 py-4 rounded-full bg-white/10 backdrop-blur-xs border border-white/30 text-white text-[11px] sm:text-[13px] font-medium tracking-wider uppercase transition-all duration-300 hover:bg-white hover:text-black shadow-[0_4px_8px_rgba(0,0,0,0.15)]"
-              >
-                GO TO WEBSITE
-              </button>
-            </div>
-          </div>
+          <h2 className="text-5xl sm:text-7xl md:text-8xl lg:text-[100px] font-black text-[#111111] leading-[0.85] tracking-tighter uppercase break-words hyphens-auto mt-4">
+            SPACES <br/>THAT PEAK <br/>CURIOSITY.
+          </h2>
         </div>
+
+        {/* Text Right */}
+        <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200" className="lg:col-span-5 pl-0 lg:pl-12 pt-8 lg:pt-0">
+          <p className="text-[14px] sm:text-[16px] text-[#111111] leading-relaxed mb-6 font-bold">
+            Engineering smart environments and human-centered innovation, THINK is where imagination meets code. Specializing in AI systems, XR technologies, and digital simulations.
+          </p>
+
+          <p className="text-[14px] text-[#666666] leading-relaxed mb-10 font-normal">
+            From large-scale global conferences and brand activations to meticulously designed cultural exhibitions, Think merges aesthetic brilliance with logistical perfection. When Pylon creates a physical footprint, Think ensures it leaves an indelible mark.
+          </p>
+
+          <button
+            onClick={() => window.open("https://thinkstudio.ai/", "_blank", "noopener,noreferrer")}
+            className="w-full text-center px-8 py-4 bg-[#111111] text-[#FAFAFA] text-[13px] font-bold tracking-widest uppercase transition-all duration-200 hover:-translate-y-1 shadow-[4px_4px_0_#D4AF37] hover:shadow-[6px_6px_0_#D4AF37]"
+          >
+            WWW.THINKSTUDIO.AI &rarr;
+          </button>
+        </div>
+
       </div>
     </section>
   );

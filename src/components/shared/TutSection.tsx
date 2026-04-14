@@ -1,144 +1,55 @@
+import React from 'react';
 import Tut from "../../assets/Layer_1.png";
 import Section1 from "../../assets/image.webp";
 import Section2 from "../../assets/imagel;.webp";
-import Section3 from "../../assets/imageee.webp";
-import Section4 from "../../assets/image (2).webp";
-import Section5 from "../../assets/image (1).webp";
 
 export default function TutSection() {
   return (
-    <section id="tut" className=" w-full py-12 sm:py-14 md:py-16">
-      <div className=" mx-auto px-4 sm:px-8 md:px-12 overflow-hidden">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-6 md:gap-7 items-start">
-          {/* Left Side - Content */}
-          <div
-            data-aos="fade-right"
-            className="space-y-6 sm:space-y-7 md:space-y-8"
-          >
-            {/* Logo */}
-            <div className="mb-6 sm:mb-7 md:mb-8">
-              <img
-                src={Tut}
-                alt="TUT Logo"
-                className="h-12 sm:h-14 md:h-16 lg:h-20"
-              />
+    <section id="tut" className="w-full py-24 sm:py-32 border-b-2 border-[#111111] relative overflow-hidden bg-[#FAFAFA]">
+      <div className="max-w-[1600px] mx-auto px-6 sm:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+          
+          {/* Left Content (Sticky) */}
+          <div data-aos="fade-right" data-aos-duration="1000" className="lg:col-span-5 lg:sticky top-32">
+            <div className="mb-12 border-b-4 border-[#111111] pb-6 inline-block">
+              <img src={Tut} alt="TUT Logo" className="h-10 sm:h-14 object-contain filter invert opacity-90" />
             </div>
 
-            {/* First Description */}
-            <div className="space-y-3 sm:space-y-4">
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal leading-tight text-[#585A45]">
-                WE FUSE CREATIVITY,
-                <br />
-                CULTURAL DEPTH, AND TO
-                <br />
-                BUILD AND ELEVATE THE
-                <br />
-                BRANDS, EXPERIENCES,
-                <br />
-                AND DESTINATIONS THAT
-                <br />
-                WILL DEFINE THE FUTURE.
-              </h2>
-            </div>
-
-            {/* Second Description */}
-            <div className="space-y-3 sm:space-y-4">
-              <p className="text-sm sm:text-base md:text-md text-[#585A45] leading-relaxed p-2">
-                Empowering local craftsmanship with global access. TUT Group is
-                Pylon's commerce vertical – a complete ecosystem that bridges
-                Egyptian products with global markets. Through curated retail,
-                digital trade platforms, and logistical innovation, TUT
-                redefines what it means to be "Made in Egypt," positioning local
-                excellence for international growth.
-              </p>
-            </div>
-
-            {/* Button */}
-            <div className="pt-3 sm:pt-4">
-              <button
-                onClick={() => {
-                  window.open(
-                    "https://tradeontut.com/",
-                    "_blank",
-                    "noopener,noreferrer",
-                  );
-                }}
-                className="service-button px-6 sm:px-7 md:px-8 py-3 sm:py-3.5 md:py-4 rounded-full bg-[#D2D4D1]/90 text-black text-[10px] sm:text-[11px] md:text-[13px] font-medium tracking-wider uppercase transition-all duration-300 hover:bg-black hover:text-white shadow-[0_4px_8px_rgba(0,0,0,0.15)]"
-              >
-                GO TO WEBSITE
-              </button>
-            </div>
-
-            {/* Large Image at the Bottom */}
-            <div className="col-span-7 h-[180px] sm:h-[200px] md:h-[215px] lg:h-[215px]  overflow-hidden rounded-lg">
-              <img
-                src={Section4}
-                alt="Gallery 3"
-                className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                loading="eager"
-                decoding="async"
-              />
-            </div>
-          </div>
-
-          {/* Right Side - Image Gallery */}
-          <div data-aos="fade-left" className="relative space-y-3 sm:space-y-4">
-            <p className="text-[10px] sm:text-xs md:text-sm tracking-wider uppercase text-[#585A45]">
-              E-COMMERCE, TRADE & CULTURAL EXPORTS
+            <p className="text-[12px] sm:text-[14px] font-bold tracking-[0.2em] uppercase text-[#D4AF37] mb-6">
+              [ TRADE & COMMERCE ]
             </p>
-            {/* First Row - Two images with different widths */}
-            <div className="grid grid-cols-5 gap-3 sm:gap-4">
-              {/* First Image - Wider (takes 3 columns) */}
-              <div className="col-span-3 h-[320px] sm:h-[380px] md:h-[440px] overflow-hidden rounded-lg">
-                <img
-                  src={Section1}
-                  alt="Gallery 5"
-                  className="w-full h-full object-fill transition-transform duration-300 hover:scale-105"
-                  loading="eager"
-                  decoding="async"
-                />
-              </div>
 
-              {/* Second Image - Narrower (takes 2 columns) */}
-              <div className="col-span-2 h-[320px] sm:h-[380px] md:h-[440px] overflow-hidden rounded-lg">
-                <img
-                  src={Section2}
-                  alt="Gallery 2"
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                  loading="eager"
-                  decoding="async"
-                />
-              </div>
-            </div>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl text-[#111111] font-black leading-[0.9] mb-8 tracking-tighter uppercase">
+              ELEVATING <br/>
+              BRANDS & <br/>
+              DESTINATIONS.
+            </h2>
 
-            {/* Second Row - One large image on left, two stacked on right */}
-            <div className="grid grid-cols-5 gap-3 sm:gap-4">
-              {/* Third Image - Large square/rectangle (takes 3 columns, taller) */}
-              <div className="col-span-7 h-[180px] sm:h-[200px] md:h-[220px] overflow-hidden rounded-lg">
-                <img
-                  src={Section3}
-                  alt="Gallery 3"
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                  loading="eager"
-                  decoding="async"
-                />
-              </div>
+            <p className="text-[14px] sm:text-[16px] text-[#111111] leading-relaxed mb-10 font-medium">
+              Empowering local craftsmanship with global access. TUT Group is Pylon's commerce vertical – a complete ecosystem that bridges Egyptian products with global markets. Through curated retail, digital trade platforms, and logistical innovation, TUT redefines what it means to be "Made in Egypt."
+            </p>
 
-              {/* Right side - Two images stacked */}
-              <div className="col-span-7 space-y-3 sm:space-y-4">
-                {/* Fourth Image - Top right */}
-                <div className="col-span-7 h-[120px] sm:h-[135px] md:h-[150px] lg:h-[205px] xl:h-[150px]  overflow-hidden rounded-lg">
-                  <img
-                    src={Section5}
-                    alt="Gallery 4"
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                    loading="eager"
-                    decoding="async"
-                  />
-                </div>
+            <button
+              onClick={() => window.open("https://tradeontut.com/", "_blank", "noopener,noreferrer")}
+              className="brutal-panel px-8 py-4 text-[#111111] text-[13px] font-bold tracking-widest uppercase transition-all duration-200 hover:translate-x-1 hover:-translate-y-1 hover:shadow-[4px_4px_0_rgba(17,17,17,1)]"
+            >
+              WWW.TRADEONTUT.COM &rarr;
+            </button>
+          </div>
+
+          {/* Right Image Gallery (Overlapping raw images) */}
+          <div className="lg:col-span-7 relative mt-16 lg:mt-0" data-aos="fade-left" data-aos-duration="1000">
+            <div className="relative w-full h-[600px] sm:h-[800px]">
+              <div className="absolute top-0 right-0 w-[80%] h-[60%] border-2 border-[#111111] overflow-hidden z-10 shadow-[8px_8px_0_#111111] hover:-translate-y-2 hover:translate-x-2 transition-transform duration-500">
+                <img src={Section1} alt="TUT Gallery" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" loading="lazy" />
+              </div>
+              <div className="absolute bottom-0 left-0 w-[70%] h-[55%] border-2 border-[#111111] overflow-hidden z-20 shadow-[-8px_8px_0_#111111] hover:-translate-y-2 hover:-translate-x-2 transition-transform duration-500 bg-white">
+                <img src={Section2} alt="TUT Gallery 2" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 opacity-90" loading="lazy" />
+                <div className="absolute top-4 left-4 brutal-panel px-3 py-1 text-[10px] font-bold">FIG. 01</div>
               </div>
             </div>
           </div>
+          
         </div>
       </div>
     </section>

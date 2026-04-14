@@ -1,89 +1,66 @@
+import React from 'react';
 import MediaMagnetLogo from "../../assets/mediaMagnet.png";
 import MediaMagnetBottomImage from "../../assets/mediaMagnet1.webp";
 
 export default function MediaMagnetSection() {
   return (
-    <section id="media" className=" w-full py-12 sm:py-14 md:py-16">
-      <div className=" mx-auto px-4 sm:px-8 md:px-12 overflow-hidden">
-        {/* Top Grid - Left and Right Sides */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center mb-8 sm:mb-10 md:mb-12">
-          {/* Left Side - Logo and Descriptions */}
-          <div
-            data-aos="fade-right"
-            className="flex flex-col space-y-6 sm:space-y-7 md:space-y-8"
-          >
-            {/* Logo */}
-            <div className="mb-3 sm:mb-4">
-              <div className="mb-6 sm:mb-7 md:mb-8">
-                <img
-                  src={MediaMagnetLogo}
-                  alt="Media Magnet Logo"
-                  className="h-12 sm:h-14 md:h-16 lg:h-20"
-                />
-              </div>
+    <section id="media" className="w-full py-24 sm:py-32 border-b-2 border-[#111111] relative overflow-hidden bg-[#FAFAFA]">
+      <div className="max-w-[1600px] mx-auto px-6 sm:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16 lg:mb-24">
+          
+          {/* Left Title Column */}
+          <div data-aos="fade-right" data-aos-duration="1000" className="lg:col-span-5">
+            <div className="mb-8 border-b-4 border-[#111111] pb-6 inline-block">
+              <img src={MediaMagnetLogo} alt="Media Magnet Logo" className="h-10 sm:h-14 object-contain filter invert opacity-90" />
             </div>
 
-            {/* First Description */}
-            <div>
-              <h3 className="text-sm sm:text-base md:text-lg lg:text-xl text-[#3B3B3B] leading-relaxed font-light">
-                MEDIA MAGNET IS PYLON Holding'S HUB FOR DIGITAL STORYTELLING AND
-                SOCIAL INFLUENCE. FROM VIRAL VIDEOS AND BRAND STORYTELLING TO
-                INFLUENCER PARTNERSHIPS AND DIGITAL ACTIVATIONS, MEDIA MAGNET
-                HELPS BRANDS GROW THEIR VOICE, SHAPE PERCEPTION, AND STAY AT THE
-                CENTER OF CULTURE.
-              </h3>
-            </div>
+            <p className="text-[12px] sm:text-[14px] font-bold tracking-[0.2em] uppercase text-[#111111] mb-6 inline-block bg-[#D4AF37] px-2 py-1">
+              [ SOCIAL INFLUENCE ]
+            </p>
 
-            {/* Second Description */}
-            <div>
-              <p className="text-xs sm:text-sm md:text-base text-[#3B3B3B]/80 leading-relaxed">
-                DRIVING CONVERSATIONS. CREATING CONTENT THAT CONNECTS
-              </p>
-            </div>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl text-[#111111] font-black leading-[0.9] mb-8 tracking-tighter uppercase mt-4">
+              DRIVING<br/>CONVERSATION.
+            </h2>
           </div>
 
-          {/* Right Side - Description and Button */}
-          <div
-            data-aos="fade-left"
-            className="flex flex-col justify-between h-full items-start"
-          >
-            {/* Description Text */}
-            <div className="flex-grow flex items-start lg:mt-33 ">
-              <p className="text-xs sm:text-sm md:text-base text-[#3B3B3B] max-w-full lg:max-w-[260px] leading-relaxed">
-                Specializing in content creation, social media strategy, and PR
-                campaigns, we craft bold narratives that resonate across
-                platforms.
+          {/* Right Text Column */}
+          <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200" className="lg:col-span-7 flex flex-col justify-between h-full pt-0 lg:pt-12">
+            <div className="brutal-panel p-6 sm:p-10 mb-8 border-l-8 border-l-[#D4AF37]">
+              <h2 className="text-[18px] sm:text-[22px] text-[#111111] font-black leading-snug mb-4 tracking-tighter uppercase">
+                Media Magnet is Pylon's hub for digital storytelling.
+              </h2>
+              <p className="text-[14px] sm:text-[16px] text-[#222222] leading-relaxed mb-6 font-medium">
+                From viral videos and brand storytelling to influencer partnerships and digital activations, Media Magnet helps brands grow their voice, shape perception, and stay at the center of culture.
+              </p>
+              <p className="text-[14px] text-[#666666] leading-relaxed font-normal">
+                Specializing in content creation, social media strategy, and PR campaigns, we craft bold narratives that resonate across platforms.
               </p>
             </div>
 
-            {/* Button */}
-            <div
-              onClick={() => {
-                window.open(
-                  "http://mediamagneteg.com/",
-                  "_blank",
-                  "noopener,noreferrer",
-                );
-              }}
-              className="mt-4 sm:mt-5"
-            >
-              <button className="service-button px-6 sm:px-7 md:px-8 py-3 sm:py-3.5 md:py-4 rounded-full bg-[#D2D4D1]/90 text-black text-[10px] sm:text-[11px] md:text-[13px] font-medium tracking-wider uppercase transition-all duration-300 hover:bg-black hover:text-white shadow-[0_4px_8px_rgba(0,0,0,0.15)]">
-                GO TO WEBSITE
+            <div className="flex justify-start lg:justify-end">
+              <button
+                onClick={() => window.open("http://mediamagneteg.com/", "_blank", "noopener,noreferrer")}
+                className="brutal-panel bg-[#111111] text-[#FAFAFA] px-8 py-4 text-[13px] font-bold tracking-widest uppercase transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 shadow-[4px_4px_0_#D4AF37] hover:shadow-[6px_6px_0_#D4AF37]"
+              >
+                WWW.MEDIAMAGNETEG.COM &rarr;
               </button>
             </div>
           </div>
+
         </div>
 
-        {/* Bottom Wide Image */}
-        <div data-aos="fade-up" className="w-full">
-          <div className="h-[300px] sm:h-[380px] md:h-[450px] lg:h-[500px] overflow-hidden rounded-lg">
+        {/* Massive Full Width Image Bottom */}
+        <div data-aos="fade-up" data-aos-duration="1200" className="w-full relative">
+          <div className="h-[400px] sm:h-[500px] md:h-[600px] overflow-hidden border-2 border-[#111111] shadow-[8px_8px_0_#111111]">
             <img
               src={MediaMagnetBottomImage}
               alt="Media Magnet Content"
-              className="w-full h-full object-fill transition-transform duration-500 ease-out hover:scale-[1.03]"
+              className="w-full h-full object-cover transition-transform duration-1000 ease-out hover:scale-105 filter grayscale hover:grayscale-0"
               loading="lazy"
-              decoding="async"
             />
+          </div>
+          <div className="absolute top-4 left-4 lg:top-8 lg:left-8 bg-[#FAFAFA] border-2 border-[#111111] px-4 py-2 text-[14px] font-bold text-[#111111] uppercase tracking-widest shadow-[4px_4px_0_#111111]">
+            CONTENT THAT CONNECTS
           </div>
         </div>
       </div>

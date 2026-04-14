@@ -1,103 +1,50 @@
-import TactLogo from "../../assets/tact.png"; // Update with your actual logo path
-import TactImage1 from "../../assets/tactImage1.webp"; // Update with your actual image path
-import TactImage2 from "../../assets/tactImage2.webp"; // Update with your actual image path
+import React from 'react';
+import TactLogo from "../../assets/tact.png";
+import TactImage1 from "../../assets/tactImage1.webp";
+import TactImage2 from "../../assets/tactImage2.webp";
 
 export default function TactSection() {
   return (
-    <section id="tact" className="min-h-screen w-full py-16">
-      <div className="  mx-auto px-4 sm:px-12 overflow-hidden">
-        {/* Glass Box Container */}
-        <div className="bg-white/10 backdrop-blur-xs rounded-2xl shadow-[0_0_30px_rgba(0,0,0,0.1)] border border-white/30 p-8 sm:p-12">
-          <div className="grid grid-cols-1 space-x-15 lg:grid-cols-2 gap-12 items-stretch min-h-[700px]">
-            {/* Left Side - Content */}
-            <div
-              data-aos="fade-right"
-              className="flex flex-col justify-between h-full"
-            >
-              {/* Logo */}
-              <div className="mb-8">
-                <img
-                  src={TactLogo}
-                  alt="TACT Logo"
-                  className="h-20 sm:h-24 mb-4"
-                />
-              </div>
-
-              {/* First Description - Main Heading */}
-              <div className="mb-8">
-                <h3 className="text-xl sm:text-2xl   lg:text-3xl font-normal leading-tight text-black">
-                  FROM CONCEPT TO COMPLETION, TACT BLENDS ENGINEERING EXCELLENCE
-                  WITH TACTICAL PROJECT MANAGEMENT TO SHAPE ENVIRONMENTS THAT
-                  REFLECT VISION, FUNCTION, AND FORM. WHETHER COMMERCIAL,
-                  CULTURAL, OR URBAN DEVELOPMENT — TACT BUILDS WITH INTENTION
-                  AND IMPACT.
-                </h3>
-              </div>
-
-              {/* Second Description - Body Text */}
-              <div className="mb-auto">
-                <p className="text-sm sm:text-2xl  lg:pt-20 text-black leading-relaxed">
-                  Tact is the execution arm of Pylon Holding, delivering
-                  high-quality construction and infrastructure services with a
-                  focus on efficiency, innovation, and design integrity.
-                </p>
-              </div>
-
-              {/* Spacer to push button down */}
-              <div className="flex-grow"></div>
-
-              {/* Button */}
-              <div
-                onClick={() => {
-                  window.open(
-                    "https://tactinnovations.com/",
-                    "_blank",
-                    "noopener,noreferrer",
-                  );
-                }}
-                className="mt-8"
-              >
-                <button className="service-button px-8 py-4 rounded-full bg-[#D2D4D1]/90 text-black text-[11px] sm:text-[13px] font-medium tracking-wider uppercase transition-all duration-300 hover:bg-black hover:text-white shadow-[0_4px_8px_rgba(0,0,0,0.15)]">
-                  GO TO WEBSITE
-                </button>
-              </div>
+    <section id="tact" className="w-full py-24 sm:py-32 border-b-2 border-[#111111] bg-[#FAFAFA] relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-1/3 h-full border-l-2 border-[#111111] bg-[#E5E5E5] mix-blend-multiply opacity-50 z-0 hidden lg:block"></div>
+      
+      <div className="max-w-[1600px] mx-auto px-6 sm:px-12 relative z-10">
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-16">
+          
+          <div data-aos="fade-right" data-aos-duration="1000" className="w-full lg:w-1/2">
+            <div className="mb-12 border-b-4 border-[#111111] pb-6 inline-block">
+              <img src={TactLogo} alt="Tact Innovations Logo" className="h-10 sm:h-12 object-contain filter invert opacity-90" />
             </div>
 
-            {/* Right Side - Images and Text */}
-            <div
-              data-aos="fade-left"
-              className="flex flex-col justify-between h-full space-y-6"
-            >
-              {/* Top Image */}
-              <div className="flex-1 overflow-hidden rounded-lg">
-                <img
-                  src={TactImage1}
-                  alt="TACT Project 1"
-                  className="w-full h-full object-cover  transition-transform duration-300 hover:scale-105"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
+            <p className="text-[12px] sm:text-[14px] font-bold tracking-[0.2em] uppercase text-[#D4AF37] mb-6">
+              [ IMMERSIVE DIGITAL INNOVATIONS ]
+            </p>
 
-              {/* Middle Text */}
-              <div className="py-4">
-                <p className="text-xs sm:text-sm tracking-wider uppercase text-black text-left">
-                  BUILDING WITH PRECISION. DEVELOPING WITH PURPOSE.
-                </p>
-              </div>
-
-              {/* Bottom Image */}
-              <div className="flex-1 overflow-hidden rounded-lg">
-                <img
-                  src={TactImage2}
-                  alt="TACT Project 2"
-                  className="w-full h-full object-cover  transition-transform duration-300 hover:scale-105"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-            </div>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl text-[#111111] font-black leading-[0.9] mb-8 tracking-tighter uppercase relative">
+              <span className="bg-[#111111] text-[#FAFAFA] px-2 leading-tight mix-blend-difference z-10 w-max inline-block">ENGINEERING</span><br/>
+              EXPERIENCES.<br/>
+              BEYOND<br/>
+              SCREENS.
+            </h2>
           </div>
+
+          <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" className="w-full lg:w-1/2 brutal-panel p-8 sm:p-12 mt-0 lg:mt-32">
+            <p className="text-[14px] sm:text-[16px] text-[#111111] leading-relaxed mb-8 font-medium">
+              Transforming how people interact with spaces, brands, and information. TACT blends hardware, software, and physical environments to create interactive journeys that captivate users.
+            </p>
+
+            <p className="text-[14px] text-[#666666] leading-relaxed mb-10 font-normal">
+              Whether through real-time data visualization, augmented reality, or sensory-rich physical installations, TACT pushes the boundaries of human-computer interaction. It's not just tech; it's the future of engagement.
+            </p>
+
+            <button
+              onClick={() => window.open("https://tactinnovations.com/", "_blank", "noopener,noreferrer")}
+              className="px-6 py-3 bg-[#111111] text-[#FAFAFA] text-[13px] font-bold tracking-widest uppercase transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 shadow-[4px_4px_0_#D4AF37] hover:shadow-[6px_6px_0_#D4AF37]"
+            >
+              WWW.TACTINNOVATIONS.COM &rarr;
+            </button>
+          </div>
+
         </div>
       </div>
     </section>
