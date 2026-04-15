@@ -13,7 +13,7 @@ export default function Services() {
 
   const renderTextItem = (text: string) => (
     <div className="flex items-center mx-4 sm:mx-8 group cursor-pointer">
-      <span className="text-[40px] sm:text-[60px] md:text-[80px] lg:text-[100px] font-bold text-transparent tracking-tighter transition-all duration-300 group-hover:text-white group-hover:scale-105" 
+      <span className="text-[40px] sm:text-[60px] md:text-[60px] lg:text-[60px] font-bold text-transparent tracking-tighter transition-all duration-300 group-hover:text-white group-hover:scale-105" 
             style={{ WebkitTextStroke: '1px #525252' }}>
         {text}
       </span>
