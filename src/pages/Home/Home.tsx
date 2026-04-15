@@ -24,13 +24,12 @@ export default function Home() {
     <div className="min-h-screen bg-transparent text-white font-sans">
       <NavBar />
       <HeroSection />
-      
+
       <Suspense fallback={<div className="h-32"></div>}>
         <Purpose />
-        <Culture />
         {/* Divider Loop */}
-        <div className="w-full overflow-hidden border-b border-white/10 opacity-80 pt-8 pb-12 relative z-20 bg-[#0A0A0A]">
-          <CurvedLoop 
+        <div className="w-full overflow-hidden border-b border-white/10 opacity-80 pt-8 pb-12 relative z-20 bg-transparent">
+          <CurvedLoop
             marqueeText="PYLON ✦ HOLDING ✦ PYLON ✦ HOLDING ✦ PYLON ✦ HOLDING ✦ "
             speed={2}
             curveAmount={280}
@@ -38,6 +37,8 @@ export default function Home() {
             interactive
           />
         </div>
+        <Culture />
+
         <Ecosystem />
         <Services />
         <Footer />

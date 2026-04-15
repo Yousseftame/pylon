@@ -86,11 +86,11 @@ export default function HeroSection() {
             Trusted capabilities across
           </p>
           <div className="flex flex-wrap justify-center gap-x-8 sm:gap-x-14 gap-y-6 text-white/70 font-semibold text-[14px] sm:text-[16px]">
-             <span className="hover:text-white transition-all duration-300 cursor-pointer hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]">Media Production</span>
-             <span className="hover:text-white transition-all duration-300 cursor-pointer hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]">Public Policy</span>
-             <span className="hover:text-white transition-all duration-300 cursor-pointer hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]">Immersive Tech</span>
-             <span className="hover:text-white transition-all duration-300 cursor-pointer hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]">Trade & Commerce</span>
-             <span className="hover:text-white transition-all duration-300 cursor-pointer hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]">Strategic Design</span>
+             <span className="hover:text-white transition-all duration-300  hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]">Media Production</span>
+             <span className="hover:text-white transition-all duration-300  hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]">Public Policy</span>
+             <span className="hover:text-white transition-all duration-300  hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]">Immersive Tech</span>
+             <span className="hover:text-white transition-all duration-300  hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]">Trade & Commerce</span>
+             <span className="hover:text-white transition-all duration-300  hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]">Strategic Design</span>
           </div>
         </div>
 
