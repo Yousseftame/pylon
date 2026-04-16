@@ -145,7 +145,7 @@ export default function Purpose() {
                     from={0}
                     to={6}
                     direction="up"
-                    duration={3}
+                    duration={2.5}
                     className="count-up-text "
                   />
                   <span>+</span>
