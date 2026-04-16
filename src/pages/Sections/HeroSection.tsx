@@ -7,7 +7,7 @@ export default function HeroSection() {
       {/* LineWaves Background */}
       <div className="absolute inset-0 z-0 pointer-events-auto">
         <Particles
-          particleColors={["#ffffff"]}
+          particleColors={["#fff"]}
           particleCount={200}
           particleSpread={10}
           speed={0.1}
