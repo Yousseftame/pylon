@@ -41,12 +41,8 @@ export default function HeroSection() {
           />
 
           <p className="text-[16px] sm:text-[18px] md:text-[20px] text-gray-300 font-medium leading-relaxed max-w-2xl mx-auto mb-12 drop-shadow-md">
-            Pylon Holding is a beacon of cultural and technological strength,
-            empowering ideas, elevating brands, and envisioning the future
-            through interconnected capabilities.{" "}
-            <br className="hidden sm:block" />
-            Bridging heritage and innovation, we build the next generation of
-            transformative experiences, narratives, and global destinations.
+            A holding group building companies at the intersection of culture,
+            technology, and commerce. 
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pointer-events-auto">

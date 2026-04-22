@@ -8,21 +8,21 @@ const pillars = [
     title: "Design",
     label: "Strategy & Architecture",
     description:
-      "We architect spatial intelligence and forward-planning frameworks — the invisible scaffolding that determines whether ventures endure or collapse under their own ambition.",
+      "We define the structure before a single brick is laid — strategy, architecture, and systems that hold up under real pressure.",
   },
   {
     number: "02",
     title: "Build",
     label: "Engineering & Infrastructure",
     description:
-      "We engineer resilient infrastructure at the intersection of technology, culture, and capital — systems designed not for the present, but for the demands of what comes next.",
+      "We build infrastructure that works today and scales tomorrow — across technology, culture, and capital.",
   },
   {
     number: "03",
     title: "Operate",
     label: "Management & Ecosystem",
     description:
-      "We operate high-performance ecosystems with the discipline of institutions and the agility of founders — translating vision into compounding, measurable impact at scale.",
+      "We run what we build. With the discipline of institutions and the speed of founders.",
   },
 ];
 
@@ -114,20 +114,16 @@ export default function Purpose() {
               transition={{ duration: 0.9, delay: 0.4 }}
               className="text-base sm:text-lg text-gray-400 font-light leading-[1.9] max-w-xl"
             >
-              Driven by a singular conviction: that the world's most important
-              institutions are not inherited — they are{" "}
+              The world's most important institutions aren't inherited {""}
               <span className="text-white font-medium italic">
-                deliberately designed
+                they're built. We design,
               </span>
-              ,{" "}
+              {" "}
               <span className="text-white font-medium italic">
-                precisely built
+                build, and operate them
               </span>
-              , and{" "}
-              <span className="text-white font-medium italic">
-                expertly operated
-              </span>{" "}
-              by those who refuse to accept the limits of the present.
+              , and operate them.{" "}
+             
             </motion.p>
 
             {/* Stats block */}

@@ -1,10 +1,10 @@
 import  { useState } from 'react';
-import { ArrowUpRight, Box, Image as ImageIcon, Zap, Layers, BarChart, MessageSquare, Utensils, Leaf, Cog } from 'lucide-react';
+import { ArrowUpRight, Box, Image as ImageIcon,  Layers, BarChart, MessageSquare, Utensils, Leaf, Cog } from 'lucide-react';
 import SplitText from "../../components/SplitText";
 
 import tutImg from '../../assets/imageee.webp';
 import dsImg from '../../assets/imagejj.webp';
-import tactImg from '../../assets/tactImage1.webp';
+// import tactImg from '../../assets/tactImage1.webp';
 import thinkImg from '../../assets/insightifyImage1.webp';
 import insightifyImg from '../../assets/insightifyImage2.webp';
 import mediaImg from '../../assets/mediaMagnet1.webp';
@@ -20,7 +20,7 @@ const companies = [
     image: tutImg,
     tagline: "Designing Tomorrow's Icons.",
     description:
-      "A powerhouse spanning real estate, design, engineering, contracting, and interior design. Tut Group crafts visionary projects, shaping skylines and developing environments that prioritize luxury, functionality, and sustainability.",
+      "Egypt's cross-border trade platform. Connecting local makers to global buyers.",
     link: "https://tut-landing.vercel.app/",
   },
   {
@@ -30,19 +30,19 @@ const companies = [
     image: dsImg,
     tagline: "Designing with Purpose.",
     description:
-      "A multi-disciplinary design studio dedicated to creating functional beauty. Specializing in branding, identity, and spatial design, DS+ translates complex ideas into clear, compelling visual narratives that define industry standards. The group's creative engine.",
+      "Branding, identity, and spatial design. Where ideas become visual.",
     link: "https://digitalstudioeg.com/",
   },
-  {
-    id: "tact",
-    name: "TACT",
-    icon: <Zap size={24} />,
-    image: tactImg,
-    tagline: "Immersive Digital Innovations.",
-    description:
-      "Transforming how people interact with spaces, brands, and information. TACT blends hardware, software, and physical environments to create interactive journeys. Whether through real-time data visualization, AR, or sensory-rich physical installations, TACT pushes the boundaries of human-computer interaction.",
-    link: "https://tactinnovations.com/",
-  },
+  // {
+  //   id: "tact",
+  //   name: "TACT",
+  //   icon: <Zap size={24} />,
+  //   image: tactImg,
+  //   tagline: "Immersive Digital Innovations.",
+  //   description:
+  //     "Transforming how people interact with spaces, brands, and information. TACT blends hardware, software, and physical environments to create interactive journeys. Whether through real-time data visualization, AR, or sensory-rich physical installations, TACT pushes the boundaries of human-computer interaction.",
+  //   link: "https://tactinnovations.com/",
+  // },
   {
     id: "thinkai",
     name: "THINK",
@@ -50,7 +50,7 @@ const companies = [
     image: thinkImg,
     tagline: "AI & Immersive Technologies.",
     description:
-      "Engineering smart environments and human-centered innovation, THINK is where imagination meets code. Specializing in AI systems, XR technologies, and digital simulations. From large-scale global conferences to meticulously designed cultural exhibitions, Think merges aesthetic brilliance with logistical perfection.",
+      "AI systems, XR technologies, and digital simulations. Smart environments, beautifully executed.",
     link: "https://thinkstudio.ai/",
   },
   {
@@ -60,7 +60,7 @@ const companies = [
     image: insightifyImg,
     tagline: "Public Policy & Strategic Advisory.",
     description:
-      "INSIGHTIFY IS PYLON'S STRATEGIC BRAIN, DELIVERING ACTIONABLE INTELLIGENCE. With a deep understanding of regional context and global dynamics, we support decision-makers in building resilient policies and meaningful change, building frameworks that drive equitable growth.",
+      "Strategic intelligence and policy advisory. For decision-makers who need clarity, not noise.",
     link: "https://insightify-eg.com/",
   },
   {
@@ -80,7 +80,7 @@ const companies = [
     image: bocshaImg,
     tagline: "Freshly Caught WILD Fish.",
     description:
-      "Bocsha is a destination for authentic Egyptian seafood experiences, specializing in traditional fesikh, renga, and fresh Nile fish. We bring the true taste of Egyptian heritage to your table with carefully selected ingredients, rich flavors, and a unique dining atmosphere that blends tradition with quality.",
+      "Wild-caught Egyptian seafood sourced directly from local fishermen — delivered to your door or served from our trucks across Cairo.",
     link: "https://bocsha.com/",
   },
   {
@@ -88,9 +88,9 @@ const companies = [
     name: "LUMI FARM",
     icon: <Leaf size={24} />,
     image: lumiImg,
-    tagline: "Premium Egyptian Farm.",
+    tagline: "Farm to Door.",
     description:
-      "Lumi Farm is a premium Egyptian farm specializing in high-quality livestock and agricultural production. We raise carefully selected imported and local cattle, ensuring top standards in nutrition, care, and sustainability. From cows and buffalo to farm-fresh products, we are committed to delivering exceptional quality and trusted farm-to-market solutions.",
+      "Egypt's first farm-owned, direct-to-consumer protein brand. Dairy, fish, and meat — sourced from owned farms, delivered fresh to your door daily via the Lumi app.",
     link: "",
   },
   {
@@ -100,7 +100,7 @@ const companies = [
     image: quipImg,
     tagline: "Integrated Engineering Solutions.",
     description:
-      "QUIP (El Salam Engineering Equipment Company) delivers integrated engineering solutions tailored to industrial and commercial needs. We specialize in supplying high-quality engineering equipment, providing technical support, and ensuring efficient system performance. Our focus is on reliability, precision, and long-term partnerships that drive operational success.",
+      "General contracting, IT infrastructure, and systems integration — delivering built environments and technology solutions across the Middle East since 1979.",
     link: "",
   },
 ];
@@ -109,25 +109,37 @@ export default function Ecosystem() {
   const [hoveredId, setHoveredId] = useState<string | null>('tut');
 
   return (
-    <section id="ecosystem" className="w-full py-32 bg-transparent relative overflow-hidden">
+    <section
+      id="ecosystem"
+      className="w-full py-32 bg-transparent relative overflow-hidden"
+    >
       <div className="max-w-[1400px] mx-auto px-4 sm:px-8">
-        
-        <div className="text-center mb-16" data-aos="fade-up" data-aos-duration="800">
+        <div
+          className="text-center mb-16"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        >
           <p className="text-[12px] font-bold tracking-widest text-white uppercase mb-4">
             Ecosystem
           </p>
           <SplitText
             text="A Unified Force"
             className="text-4xl md:text-6xl font-bold text-white tracking-tight mb-4 inline-block"
-            delay={50} duration={1.25} tag="h2"
+            delay={50}
+            duration={1.25}
+            tag="h2"
           />
           <p className="text-[16px] text-gray-400 max-w-2xl mx-auto">
-            A synergistic network of specialized entities designed to cover every angle of modern business and culture. Hover to explore.
+            Eight specialized entities. One unified group.
           </p>
         </div>
 
         {/* Dynamic Hover Accordion */}
-        <div className="flex flex-col lg:flex-row w-full h-[1000px] sm:h-[1200px] lg:h-[600px] gap-2 lg:gap-4" data-aos="fade-up" data-aos-delay="200">
+        <div
+          className="flex flex-col lg:flex-row w-full h-[1000px] sm:h-[1200px] lg:h-[600px] gap-2 lg:gap-4"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           {companies.map((company) => {
             const isActive = hoveredId === company.id;
 
@@ -143,59 +155,67 @@ export default function Ecosystem() {
                   }
                 }}
                 className={`enterprise-card relative overflow-hidden flex flex-col justify-end transition-all duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] cursor-pointer ${
-                  isActive ? "lg:flex-[4] flex-[3] shadow-[0_0_40px_rgba(255,255,255,0.1)]" : "lg:flex-1 flex-[0.5] opacity-70 hover:opacity-100"
+                  isActive
+                    ? "lg:flex-[4] flex-[3] shadow-[0_0_40px_rgba(255,255,255,0.1)]"
+                    : "lg:flex-1 flex-[0.5] opacity-70 hover:opacity-100"
                 }`}
               >
                 {/* Background Image when active */}
-                <div 
-                  className={`absolute inset-0 transition-opacity duration-[800ms] ease-in-out ${isActive ? 'opacity-100 lg:opacity-100 z-0' : 'opacity-0 -z-10'}`}
+                <div
+                  className={`absolute inset-0 transition-opacity duration-[800ms] ease-in-out ${isActive ? "opacity-100 lg:opacity-100 z-0" : "opacity-0 -z-10"}`}
                 >
-                  <img 
-                    src={company.image} 
-                    alt={company.name} 
-                    className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out scale-105" 
-                    style={{ transform: isActive ? 'scale(1)' : 'scale(1.05)' }}
+                  <img
+                    src={company.image}
+                    alt={company.name}
+                    className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out scale-105"
+                    style={{ transform: isActive ? "scale(1)" : "scale(1.05)" }}
                   />
                   {/* Subtle gradient to ensure text readability */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/20"></div>
                 </div>
 
                 <div className="relative z-10 p-4 sm:p-6 lg:p-8 h-full flex flex-col justify-end pointer-events-none">
-                  
                   {/* Top Icon */}
-                  <div className={`absolute top-4 left-4 lg:top-8 lg:left-8 transition-all duration-700 text-white ${isActive ? 'opacity-100 scale-100' : 'opacity-0 scale-50'}`}>
+                  <div
+                    className={`absolute top-4 left-4 lg:top-8 lg:left-8 transition-all duration-700 text-white ${isActive ? "opacity-100 scale-100" : "opacity-0 scale-50"}`}
+                  >
                     {company.icon}
                   </div>
 
                   {/* Vertical Text for non-active states on Desktop */}
-                  <div className={`hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-90 origin-center whitespace-nowrap transition-all duration-500 font-bold tracking-[0.2em] uppercase text-gray-400 ${isActive ? 'opacity-0' : 'opacity-100'}`}>
-                    {company.name}
-                  </div>
-                  
-                  {/* Horizontal small text for non-active states on Mobile */}
-                  <div className={`lg:hidden absolute top-1/2 left-4 -translate-y-1/2 whitespace-nowrap transition-all duration-500 font-bold tracking-widest uppercase text-gray-400 text-[14px] ${isActive ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
+                  <div
+                    className={`hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-90 origin-center whitespace-nowrap transition-all duration-500 font-bold tracking-[0.2em] uppercase text-gray-400 ${isActive ? "opacity-0" : "opacity-100"}`}
+                  >
                     {company.name}
                   </div>
 
-                  <div className={`flex flex-col justify-end transform transition-all duration-700 ${isActive ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
-                    
+                  {/* Horizontal small text for non-active states on Mobile */}
+                  <div
+                    className={`lg:hidden absolute top-1/2 left-4 -translate-y-1/2 whitespace-nowrap transition-all duration-500 font-bold tracking-widest uppercase text-gray-400 text-[14px] ${isActive ? "opacity-0 pointer-events-none" : "opacity-100"}`}
+                  >
+                    {company.name}
+                  </div>
+
+                  <div
+                    className={`flex flex-col justify-end transform transition-all duration-700 ${isActive ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+                  >
                     <h3 className="text-xl sm:text-2xl lg:text-4xl font-bold text-white tracking-tight mb-2">
                       {company.name}
                     </h3>
-                    
+
                     <p className="text-[12px] sm:text-[14px] lg:text-[16px] font-medium mb-4 lg:mb-6 text-gray-300">
                       {company.tagline}
                     </p>
 
-                    <div className={`grid transition-all duration-700 ${isActive ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
+                    <div
+                      className={`grid transition-all duration-700 ${isActive ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
+                    >
                       <div className="overflow-hidden">
                         <p className="hidden sm:block text-gray-400 text-[12px] sm:text-[13px] lg:text-[15px] leading-relaxed max-w-lg mb-6 lg:mb-8">
                           {company.description}
                         </p>
-                        
-                        <div
-                          className="inline-flex items-center gap-2 text-[12px] lg:text-[13px] font-bold tracking-widest uppercase transition-colors hover:text-white text-gray-400 pointer-events-auto"
-                        >
+
+                        <div className="inline-flex items-center gap-2 text-[12px] lg:text-[13px] font-bold tracking-widest uppercase transition-colors hover:text-white text-gray-400 pointer-events-auto">
                           Explore <ArrowUpRight size={16} />
                         </div>
                       </div>
@@ -206,7 +226,6 @@ export default function Ecosystem() {
             );
           })}
         </div>
-
       </div>
     </section>
   );
