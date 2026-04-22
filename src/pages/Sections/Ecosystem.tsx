@@ -1,5 +1,5 @@
 import  { useState } from 'react';
-import { ArrowUpRight, Box, Image as ImageIcon, Zap, Layers, BarChart, MessageSquare, Utensils, Leaf, Cog, Beef } from 'lucide-react';
+import { ArrowUpRight, Box, Image as ImageIcon, Zap, Layers, BarChart, MessageSquare, Utensils, Leaf, Cog } from 'lucide-react';
 import SplitText from "../../components/SplitText";
 
 import tutImg from '../../assets/imageee.webp';
