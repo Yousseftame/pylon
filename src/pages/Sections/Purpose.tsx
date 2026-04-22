@@ -135,7 +135,7 @@ export default function Purpose() {
                 <span className="text-3xl sm:text-4xl font-black   text-white tracking-[-0.04em] leading-none">
                   <CountUp
                     from={0}
-                    to={6}
+                    to={8}
                     direction="up"
                     duration={2.5}
                     className="count-up-text "
