@@ -29,7 +29,7 @@ export default function HeroSection() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[160%] h-[160%] bg-black/80 blur-[120px] pointer-events-none -z-10 rounded-full"></div>
 
           <SplitText
-            text="PYLON HOLDING"
+            text="PYLON COLLECTIVE"
             className="text-5xl sm:text-6xl md:text-7xl lg:text-[100px] font-bold text-white leading-[1.05] tracking-tight mb-8"
             delay={50}
             duration={1.25}
@@ -42,7 +42,7 @@ export default function HeroSection() {
 
           <p className="text-[16px] sm:text-[18px] md:text-[20px] text-gray-300 font-medium leading-relaxed max-w-2xl mx-auto mb-12 drop-shadow-md">
             A holding group building companies at the intersection of culture,
-            technology, and commerce. 
+            technology, and commerce.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pointer-events-auto">
