@@ -1,5 +1,5 @@
 import  { useState } from 'react';
-import { ArrowUpRight, Box, Image as ImageIcon, Zap, Layers, BarChart, MessageSquare } from 'lucide-react';
+import { ArrowUpRight, Box, Image as ImageIcon, Zap, Layers, BarChart, MessageSquare, Utensils, Leaf, Cog, Beef } from 'lucide-react';
 import SplitText from "../../components/SplitText";
 
 import tutImg from '../../assets/imageee.webp';
@@ -8,62 +8,101 @@ import tactImg from '../../assets/tactImage1.webp';
 import thinkImg from '../../assets/insightifyImage1.webp';
 import insightifyImg from '../../assets/insightifyImage2.webp';
 import mediaImg from '../../assets/mediaMagnet1.webp';
+import bocshaImg from "../../assets/bocsha.webp";
+import lumiImg from "../../assets/lumii.webp";
+import quipImg from "../../assets/quip.webp";
 
 const companies = [
   {
-    id: 'tut',
-    name: 'TUT GROUP',
+    id: "tut",
+    name: "TUT GROUP",
     icon: <Box size={24} />,
     image: tutImg,
-    tagline: 'Designing Tomorrow\'s Icons.',
-    description: 'A powerhouse spanning real estate, design, engineering, contracting, and interior design. Tut Group crafts visionary projects, shaping skylines and developing environments that prioritize luxury, functionality, and sustainability.',
-    link: 'https://tut-landing.vercel.app/'
+    tagline: "Designing Tomorrow's Icons.",
+    description:
+      "A powerhouse spanning real estate, design, engineering, contracting, and interior design. Tut Group crafts visionary projects, shaping skylines and developing environments that prioritize luxury, functionality, and sustainability.",
+    link: "https://tut-landing.vercel.app/",
   },
   {
-    id: 'ds',
-    name: 'DS+',
+    id: "ds",
+    name: "DS+",
     icon: <ImageIcon size={24} />,
     image: dsImg,
-    tagline: 'Designing with Purpose.',
-    description: 'A multi-disciplinary design studio dedicated to creating functional beauty. Specializing in branding, identity, and spatial design, DS+ translates complex ideas into clear, compelling visual narratives that define industry standards. The group\'s creative engine.',
-    link: 'https://digitalstudioeg.com/'
+    tagline: "Designing with Purpose.",
+    description:
+      "A multi-disciplinary design studio dedicated to creating functional beauty. Specializing in branding, identity, and spatial design, DS+ translates complex ideas into clear, compelling visual narratives that define industry standards. The group's creative engine.",
+    link: "https://digitalstudioeg.com/",
   },
   {
-    id: 'tact',
-    name: 'TACT',
+    id: "tact",
+    name: "TACT",
     icon: <Zap size={24} />,
     image: tactImg,
-    tagline: 'Immersive Digital Innovations.',
-    description: 'Transforming how people interact with spaces, brands, and information. TACT blends hardware, software, and physical environments to create interactive journeys. Whether through real-time data visualization, AR, or sensory-rich physical installations, TACT pushes the boundaries of human-computer interaction.',
-    link: 'https://tactinnovations.com/'
+    tagline: "Immersive Digital Innovations.",
+    description:
+      "Transforming how people interact with spaces, brands, and information. TACT blends hardware, software, and physical environments to create interactive journeys. Whether through real-time data visualization, AR, or sensory-rich physical installations, TACT pushes the boundaries of human-computer interaction.",
+    link: "https://tactinnovations.com/",
   },
   {
-    id: 'think',
-    name: 'THINK',
+    id: "think",
+    name: "THINK",
     icon: <Layers size={24} />,
     image: thinkImg,
-    tagline: 'AI & Immersive Technologies.',
-    description: 'Engineering smart environments and human-centered innovation, THINK is where imagination meets code. Specializing in AI systems, XR technologies, and digital simulations. From large-scale global conferences to meticulously designed cultural exhibitions, Think merges aesthetic brilliance with logistical perfection.',
-    link: 'https://thinkstudio.ai/'
+    tagline: "AI & Immersive Technologies.",
+    description:
+      "Engineering smart environments and human-centered innovation, THINK is where imagination meets code. Specializing in AI systems, XR technologies, and digital simulations. From large-scale global conferences to meticulously designed cultural exhibitions, Think merges aesthetic brilliance with logistical perfection.",
+    link: "https://thinkstudio.ai/",
   },
   {
-    id: 'insightify',
-    name: 'INSIGHTIFY',
+    id: "insightify",
+    name: "INSIGHTIFY",
     icon: <BarChart size={24} />,
     image: insightifyImg,
-    tagline: 'Public Policy & Strategic Advisory.',
-    description: 'INSIGHTIFY IS PYLON\'S STRATEGIC BRAIN, DELIVERING ACTIONABLE INTELLIGENCE. With a deep understanding of regional context and global dynamics, we support decision-makers in building resilient policies and meaningful change, building frameworks that drive equitable growth.',
-    link: 'https://insightify-eg.com/'
+    tagline: "Public Policy & Strategic Advisory.",
+    description:
+      "INSIGHTIFY IS PYLON'S STRATEGIC BRAIN, DELIVERING ACTIONABLE INTELLIGENCE. With a deep understanding of regional context and global dynamics, we support decision-makers in building resilient policies and meaningful change, building frameworks that drive equitable growth.",
+    link: "https://insightify-eg.com/",
   },
   {
-    id: 'media',
-    name: 'MEDIA MAGNET',
+    id: "media",
+    name: "MEDIA MAGNET",
     icon: <MessageSquare size={24} />,
     image: mediaImg,
-    tagline: 'Digital Storytelling.',
-    description: 'Media Magnet is Pylon\'s hub for digital storytelling and social influence. From viral videos and brand storytelling to influencer partnerships and digital activations, we help brands grow their voice, shape perception, and stay at the center of culture. We craft bold narratives that resonate.',
-    link: 'https://mediamagneteg.com/'
-  }
+    tagline: "Digital Storytelling.",
+    description:
+      "Media Magnet is Pylon's hub for digital storytelling and social influence. From viral videos and brand storytelling to influencer partnerships and digital activations, we help brands grow their voice, shape perception, and stay at the center of culture. We craft bold narratives that resonate.",
+    link: "https://mediamagneteg.com/",
+  },
+  {
+    id: "Bocsha",
+    name: "BOCSHA",
+    icon: <Utensils size={24} />,
+    image: bocshaImg,
+    tagline: "Freshly Caught WILD Fish.",
+    description:
+      "Bocsha is a destination for authentic Egyptian seafood experiences, specializing in traditional fesikh, renga, and fresh Nile fish. We bring the true taste of Egyptian heritage to your table with carefully selected ingredients, rich flavors, and a unique dining atmosphere that blends tradition with quality.",
+    link: "https://bocsha.com/",
+  },
+  {
+    id: "Lumi",
+    name: "LUMI FARM",
+    icon: <Leaf size={24} />,
+    image: lumiImg,
+    tagline: "Premium Egyptian Farm.",
+    description:
+      "Lumi Farm is a premium Egyptian farm specializing in high-quality livestock and agricultural production. We raise carefully selected imported and local cattle, ensuring top standards in nutrition, care, and sustainability. From cows and buffalo to farm-fresh products, we are committed to delivering exceptional quality and trusted farm-to-market solutions.",
+    link: "",
+  },
+  {
+    id: "Quip",
+    name: "QUIP",
+    icon: <Cog size={24} />,
+    image: quipImg,
+    tagline: "Integrated Engineering Solutions.",
+    description:
+      "QUIP (El Salam Engineering Equipment Company) delivers integrated engineering solutions tailored to industrial and commercial needs. We specialize in supplying high-quality engineering equipment, providing technical support, and ensuring efficient system performance. Our focus is on reliability, precision, and long-term partnerships that drive operational success.",
+    link: "",
+  },
 ];
 
 export default function Ecosystem() {
@@ -99,7 +138,7 @@ export default function Ecosystem() {
                 onClick={() => {
                   if (!isActive && window.innerWidth < 1024) {
                     setHoveredId(company.id);
-                  } else {
+                  } else if (company.link) {
                     window.open(company.link, "_blank", "noopener,noreferrer");
                   }
                 }}
