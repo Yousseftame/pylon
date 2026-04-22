@@ -114,16 +114,12 @@ export default function Purpose() {
               transition={{ duration: 0.9, delay: 0.4 }}
               className="text-base sm:text-lg text-gray-400 font-light leading-[1.9] max-w-xl"
             >
-              The world's most important institutions aren't inherited {""}
+              The world’s most important institutions aren’t inherited {""}
               <span className="text-white font-medium italic">
-                they're built. We design,
-              </span>
-              {" "}
-              <span className="text-white font-medium italic">
-                build, and operate them
-              </span>
-              , and operate them.{" "}
-             
+                {""} — they’re built. We design them
+              </span>{" "}
+              <span className="text-white font-medium italic">build them,</span>{" "}
+              and operate them.
             </motion.p>
 
             {/* Stats block */}
@@ -155,8 +151,8 @@ export default function Purpose() {
               <div className="flex flex-col items-start md:items-end gap-1">
                 <span className="text-3xl sm:text-4xl font-black text-white tracking-[-0.04em] leading-none">
                   <CountUp
-                    from={1900}
-                    to={2020}
+                    from={1800}
+                    to={1979}
                     direction="up"
                     duration={1.5}
                     separator=""
